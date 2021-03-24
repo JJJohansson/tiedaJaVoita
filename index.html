@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <meta charset="utf-8" />
+   <title>tv puhelinpeli</title>
+   <style>
+      html * {
+          margin: 0;
+          padding: 0;
+        }
+      tr, td {
+         border: 1px solid black;
+         font-size: 2em;
+         text-align: center;
+         }
+         td {
+         width: 100px;
+         height: 100px;
+         }
+         td input:hover {
+           background-color: #f2f2f2;
+         }
+         #main {
+         display: flex;
+         flex-direction: column;
+         }
+         #main > * {
+           margin: 1em;
+         }
+         .answer-column {
+           margin-left: 2em;
+         }
+         #answers {
+           display:flex;
+           flex-direction: row;
+         }
+
+         #lettersAndAnswers {
+            display: flex;
+            flex-direction: row;
+         }
+
+         td input {
+           width: 95%;
+           height: 95%;
+           margin: 0 auto;
+           text-align: center;
+           font-size: 1em;
+           border: none;
+         }
+         li {
+           margin-left:1em;
+         }
+      </style>
+</head>
+
+<body>
+   <h1>Etsi kirjaimista suomalainen kaupunki tai kunta<br>Find a city or municipality from the letters</h1>
+   <div id="main">
+      <figure>
+         <img src="img.jpg" height="250px" width="500px">
+         <figcaption>So I woke up one morning and saw this on the tv.<br>I was too bored to think of possible answers on my own.<br>So naturally I made a machine to do it for
+            me..<br><strong>Note! Letters can be changed to find different combinations :)</strong></figcaption>
+      </figure>
+      <div id="lettersAndAnswers">
+         <table>
+            <tr>
+               <td><input type="text" value="K"></td>
+               <td><input type="text" value="E"></td>
+               <td><input type="text" value="S"></td>
+               <td><input type="text" value="N"></td>
+            </tr>
+            <tr>
+               <td><input type="text" value="H"></td>
+               <td><input type="text" value="P"></td>
+               <td><input type="text" value="O"></td>
+               <td><input type="text" value="J"></td>
+            </tr>
+            <tr>
+               <td><input type="text" value="L"></td>
+               <td><input type="text" value="A"></td>
+               <td><input type="text" value="Ä"></td>
+               <td><input type="text" value="I"></td>
+            </tr>
+            <tr>
+               <td><input type="text" value="M"></td>
+               <td><input type="text" value="U"></td>
+               <td><input type="text" value="T"></td>
+               <td><input type="text" value="R"></td>
+            </tr>
+         </table>
+         <div class="answer-column">
+            <input type="button" onClick="answers()" value="Show answers">
+            <div id="answers">
+               <div>
+                  <h2>Cities:</h2>
+                  <ul id="cities">
+                  </ul>
+               </div>
+               <div class="answer-column">
+                  <h2>Municipalities:</h2>
+                  <ul id="municipalities">
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="script.js"></script>
+</body>
+
+</html>
+
